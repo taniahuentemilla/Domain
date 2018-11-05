@@ -11,10 +11,10 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
+Route::get('/', function () {
+    return view('welcome');
+});
 
-//Auth::routes();
+Auth::routes();
 
-Route::get('index', 'Registro_tutorController@regis');
+//Route::get('index', 'Registro_tutorController@regis');
