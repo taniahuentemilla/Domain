@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('Cursos', 'CursosController@Cursos');
+Route::get('Comentarios', 'ComentariosController@Comentarios');
 Auth::routes();
 
 //Route::get('index', 'Registro_tutorController@regis');

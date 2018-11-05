@@ -1,0 +1,19 @@
+html,body{
+	font-family: sans-serif;
+}
+*{
+	margin: 8px;
+	padding: 8px;
+}
+textarea{
+	resize: none;
+}
+#contenedor{
+	max-width: 400px;
+	margin: auto;
+}
+#conversaciones{
+	height: 200px;
+	border: 1px solid #CCC;
+	overflow-y: scroll;
+}
