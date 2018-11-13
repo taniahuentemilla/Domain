@@ -10,8 +10,11 @@ class Login_modController extends Controller
 	{
 	
 		?>
+		 <link href="css/estilos.css" rel="stylesheet">
+		 
 		<h1>Login Moderadores</h1>
-		<form id="login" action="index_mod.php" method="post" autocomplete="off">
+
+		<form class="login"ss action="index_mod.php" method="post" autocomplete="off">
 		    <p><label >Usuario:</label></p>
 		    <input name="usuario" type="text" id="usuario" placeholder="Ingresa Usuario" autofocus="" required=""></p>
 

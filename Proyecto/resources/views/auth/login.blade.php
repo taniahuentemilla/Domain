@@ -1,7 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<link href="css/estilos.css" rel= "stylesheet">
+<footer> Derechos reservado | Domain- Aprendizaje Profundo</footer>
+<header id="main-header" style="top: 0px;">
+        
+        <a id="logo-header" href="#">
+
+            <p class="aviso">   Domain         ¿Quienes somos?       Ir a UCTemuco  </p>
+ 
+    </header><!-- / #main-header -->
+<div class="container" >
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -62,10 +71,14 @@
                                 </a>
                             </div>
                         </div>
+
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
 </div>
+
+
 @endsection

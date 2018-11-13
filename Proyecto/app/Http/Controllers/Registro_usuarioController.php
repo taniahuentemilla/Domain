@@ -9,7 +9,7 @@ class Registro_usuarioController extends Controller
     public function regis()
     {
     ?>
-
+   
     <form action="registro_usuario.php" method="post">
         <h3>Registro de usuarios</h3>
         <p>Nombre: <input type="text" name="Nombre" placeholder="Nombre" required=""></p>
