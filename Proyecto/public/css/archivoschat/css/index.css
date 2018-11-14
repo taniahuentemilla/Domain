@@ -9,11 +9,23 @@ textarea{
 	resize: none;
 }
 #contenedor{
-	max-width: 400px;
+	float: right;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	max-width: 330px;
 	margin: auto;
+	background-color: #949393;
 }
+
 #conversaciones{
-	height: 200px;
+	height: 315px;
 	border: 1px solid #CCC;
 	overflow-y: scroll;
+	background-color: white;
+}
+#mostrar{
+	float: right;
+	position: static;
+
 }

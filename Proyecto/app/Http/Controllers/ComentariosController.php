@@ -26,13 +26,13 @@ class ComentariosController extends Controller
         <h2>COMENTARIOS</h2>
         <?php 							     //variables para conexion a mysql
         	$servidor = "localhost";         //conexion al servidor
-	$usuario = "root";						 //usuario root
-	$password = "";							 //si contraseña
-	$database = "comentarios";				 //base de datos especificada 
+	        $usuario = "root";						 //usuario root
+	        $password = "";							 //si contraseña
+	        $database = "comentarios";				 //base de datos especificada 
 
-	$conexion = mysqli_connect($servidor, $usuario, $password)or die(mysqli_error($conexion)); // variable de conexion con las variables antes especificadas , si no puede con la conexion envia error
-	mysqli_select_db($conexion, $database)or die(mysqli_error($conexion));  // seleccion la base de datos en la variable, si no puede manda error
-	$consulta = mysqli_query($conexion, "SELECT * FROM comentarios")or die(mysqli_error($conexion));  //ejecuta la consulta y solicita todos los datos disponibles en la base de datos si no envia error
+	        $conexion = mysqli_connect($servidor, $usuario, $password)or die(mysqli_error($conexion)); // variable de conexion con las variables antes especificadas , si no puede con la conexion envia error
+	        mysqli_select_db($conexion, $database)or die(mysqli_error($conexion));  // seleccion la base de datos en la variable, si no puede manda error
+	        $consulta = mysqli_query($conexion, "SELECT * FROM comentarios")or die(mysqli_error($conexion));  //ejecuta la consulta y solicita todos los datos disponibles en la base de datos si no envia error
               while($row = mysqli_fetch_assoc($consulta)){ //guarda los datos retornados en la variable row
               	//devolvera esta estructura html por cada fila que devulva la consulta
               	//todos los divs menos el primero estas definidos con clases para tomar el css del bootstrap
