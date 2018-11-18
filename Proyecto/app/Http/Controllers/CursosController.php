@@ -14,7 +14,8 @@ class CursosController extends Controller
 			<script src="js/index.js"></script>
 			<script src="js/bootstrap.min.js"></script>
 			<script src="js/jquery-3.3.1.min.js"></script>
-			<script src={{ asset('js/index.js')}}></script>
+			<script src="js/index.js"></script>
+
 <script>
 $(document).ready(function() {
   $("#ocultar").click(function() {
@@ -31,7 +32,7 @@ $(document).ready(function() {
 </script>
 
 </head>
-<body>
+<body onload="leer()">
 <button id="mostrar" class="btn btn-success"name="Chat" >Chat</button>
 <div id="contenedor"name="contenedor">
 	<button id="ocultar" class="btn btn-success"name="ocultar">ocultar</button>
