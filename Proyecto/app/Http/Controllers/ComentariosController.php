@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
-class ComentariosController extends Controller
+class ComentariosController extends Controllers
 {
     public function Comentarios()
     {

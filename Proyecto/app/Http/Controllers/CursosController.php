@@ -11,10 +11,10 @@ class CursosController extends Controller
      		<link rel="stylesheet" href="css/archivoschat/css/bootstrap.min.css">
 			<link rel="stylesheet" type="text/css" href="css/archivoschat/css/index.css">
 			<script src="css/archivoschat/js/bootstrap.min.js"></script>
-			<script src="js/index.js"></script>
 			<script src="js/bootstrap.min.js"></script>
 			<script src="js/jquery-3.3.1.min.js"></script>
-			<script src={{ asset('js/index.js')}}></script>
+			<script src="js/index.js"></script>
+
 <script>
 $(document).ready(function() {
   $("#ocultar").click(function() {
@@ -28,8 +28,8 @@ $(document).ready(function() {
   });
 
 });
-</script>
 
+</script>
 </head>
 <body>
 <button id="mostrar" class="btn btn-success"name="Chat" >Chat</button>
@@ -42,6 +42,7 @@ $(document).ready(function() {
 	<textarea id="mensaje" placeholder="Mensaje" class="form-control" name="mensaje"></textarea>
 	<button id="boton" class="btn btn-success" onclick="escribir()">Enviar</button>
 </div>
+
 		
 
 <?php  
