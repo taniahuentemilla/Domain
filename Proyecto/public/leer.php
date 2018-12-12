@@ -1,8 +1,12 @@
 <?php
-$file = file("chat.txt");
-for ($i = max(0, count($file)-50); $i < count($file); $i++) { // en counter almacena el numero total de lineas -50
+$dist = file('chat.json');
+$largo=count($dist);
+$str_datos = file_get_contents("datos.json");
+for ($i = max(0, count($dist)-50); $i < count($dist); $i++) { // en counter almacena el numero total de lineas -50
 															  // entonces si i=500 por ejemplo y menor a 550= total de lineas
   	                                                          // si eso es verdadero	
-  echo $file[$i] . "\n";									  // mostrara del 501 hasta la linea 550 concatenando salto de linea
+  $linea=$dist[$i];
+  $datos = json_decode($linea,true);
+  echo"<b>".$datos['usuario']."</b>"."dice: ".$datos['mensaje']."<br>";
 }
 ?>
