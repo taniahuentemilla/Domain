@@ -25,4 +25,10 @@ Route::get('tecnicasupdate/{id}','ApiController@update');
 
 Auth::routes();
 
-//Route::get('index', 'Registro_tutorController@regis');
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/preguntar', 'HomeController@preguntar_usuario')->name('preguntar');
+Route::get('/livestream', function(){
+	return view('livestream');
+}
+)->name('livestream');

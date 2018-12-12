@@ -1,23 +1,14 @@
-@extends('layouts.app')
+@extends('welcome')
 
 @section('content')
-<link href="css/estilos.css" rel= "stylesheet">
-<footer> Derechos reservado | Domain- Aprendizaje Profundo</footer>
-<header id="main-header" style="top: 0px;">
-        
-        <a id="logo-header" href="#">
-
-            <p class="aviso">   Domain         ¿Quienes somos?       Ir a UCTemuco  </p>
- 
-    </header><!-- / #main-header -->
-<div class="container" >
+<div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('preguntar') }}">
                         @csrf
 
                         <div class="form-group row">
@@ -71,14 +62,17 @@
                                 </a>
                             </div>
                         </div>
-
+						@if(session()->get('error'))
+							<div class="alert alert-info">
+								<a class="close" data-dismiss="alert">×</a>
+								<strong>Datos incorrectos</strong> {!!Session::get('error')!!}
+							</div>
+						@endif
                     </form>
+					
                 </div>
             </div>
         </div>
     </div>
-
 </div>
-
-
 @endsection
