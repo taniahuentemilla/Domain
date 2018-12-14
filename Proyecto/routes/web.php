@@ -23,6 +23,7 @@ Route::get('tecnicas/{id}','ApiController@show');
 Route::get('tecnicasadd','ApiController@add');
 Route::get('tecnicasdelete/{id}','ApiController@delete');
 Route::get('tecnicasupdate/{id}','ApiController@update');
+Route::get('inscripcion','inscripcionController@inscripcion');
 
 Auth::routes();
 

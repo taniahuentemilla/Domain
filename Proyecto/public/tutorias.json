@@ -1,0 +1,10 @@
+{
+    "Datos":
+        {
+        "Carrera" : "Ingenieria Civil en Informatica",
+        "Cursos": ["Topicos de Matematicas", "Programacion I", "Desarrollo Web","Fisica","Robotica"],
+        "Tutores":["Lia Herrera","Catalina Polanco","Lilian Moraga","Juan Espinoza","Eduardo Morales"]
+        }
+   
+    }
+     
