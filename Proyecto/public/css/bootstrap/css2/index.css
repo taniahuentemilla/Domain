@@ -1,0 +1,31 @@
+html,body{
+	font-family: sans-serif;
+}
+*{
+	margin: 8px;
+	padding: 8px;
+}
+textarea{
+	resize: none;
+}
+#contenedor{
+	float: right;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	max-width: 330px;
+	margin: auto;
+	background-color: #949393;
+}
+
+#conversaciones{
+	height: 315px;
+	border: 1px solid #CCC;
+	overflow-y: scroll;
+	background-color: white;
+}
+#mostrar{
+	float: right;
+	position: static;
+
+}

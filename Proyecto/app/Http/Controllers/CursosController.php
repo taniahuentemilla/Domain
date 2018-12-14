@@ -8,9 +8,9 @@ class CursosController extends Controller
     public function cursos()
     {
      ?>
-     		<link rel="stylesheet" href="css/archivoschat/css/bootstrap.min.css">
-			<link rel="stylesheet" type="text/css" href="css/archivoschat/css/index.css">
-			<script src="css/archivoschat/js/bootstrap.min.js"></script>
+     		<link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+			<link rel="stylesheet" type="text/css" href="css/bootstrap/css/index.css">
+			<script src="css/bootstrap/js/bootstrap.min.js"></script>
 			<script src="js/index.js"></script>
 			<script src="js/bootstrap.min.js"></script>
 			<script src="js/jquery-3.3.1.min.js"></script>

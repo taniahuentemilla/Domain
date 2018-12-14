@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 Route::get('Cursos', 'CursosController@Cursos');
 Route::get('Comentarios', 'ComentariosController@Comentarios');
+Route::get('tutoria', 'tutoriaController@tutoria');
 Route::get('tecnicas','ApiController@index');
 Route::get('tecnicas/{id}','ApiController@show');
 Route::get('tecnicasadd','ApiController@add');

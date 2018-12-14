@@ -1,0 +1,12 @@
+html,body{
+	font-family: sans-serif;
+}
+textarea{
+	resize: none;
+}
+#conversaciones{
+	height: 350px;
+	border: 1px solid #CCC;
+	overflow-y: scroll;
+	background-color: white;
+}

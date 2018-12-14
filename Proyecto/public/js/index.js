@@ -22,4 +22,11 @@ function escribir(){
 			$('#conversaciones').scrollTop($('#conversaciones')[0].scrollHeight); // mantendra el scroll en el ultimo mensaje
 		}
 	});
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
 }
