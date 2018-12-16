@@ -24,6 +24,7 @@ Route::get('tecnicasadd','ApiController@add');
 Route::get('tecnicasdelete/{id}','ApiController@delete');
 Route::get('tecnicasupdate/{id}','ApiController@update');
 Route::get('inscripcion','inscripcionController@inscripcion');
+Route::get('insclist','insclistController@insclist');
 
 Auth::routes();
 
