@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
 
 class tutoriaController extends Controller
 {
@@ -150,33 +151,22 @@ class tutoriaController extends Controller
                                 <div class="panel-heading">Material de Apoyo</div>
 
                                 <div class="panel-body">
-                                    <?php
-                                             echo "<a href=Material_de_Apoyo/Osciladores.pdf>Osciladores.PDF</a>";
-                                    ?><br>
-                                    <?php
-                                             echo "<a href=Material_de_Apoyo/Osciladores.pdf>Osciladores.PDF</a>";
-                                    ?><br>
-                                    <?php
-                                             echo "<a href=Material_de_Apoyo/Osciladores.pdf>Osciladores.PDF</a>";
-                                    ?><br>
-                                    <?php
-                                             echo "<a href=Material_de_Apoyo/Osciladores.pdf>Osciladores.PDF</a>";
-                                    ?><br>
-                                    <?php
-                                             echo "<a href=Material_de_Apoyo/guia1.pdf>Guia de Ejercicios1.PDF</a>";
-                                    ?><br>
-                                    <?php
-                                             echo "<a href=Material_de_Apoyo/guia1.pdf>Guia de Ejercicios2.PDF</a>";
-                                    ?><br>
-                                    <?php
-                                             echo "<a href=Material_de_Apoyo/guia1.pdf>Guia de Ejercicios3.PDF</a>";
-                                    ?><br>
-                                    <?php
-                                             echo "<a href=Material_de_Apoyo/guia1.pdf>Guia de Ejercicios4.PDF</a>";
-                                    ?><br>
-
+                                      <?php 
+                                        $directorio = 'Material_de_Apoyo';
+                                        if ($dir = opendir($directorio)){
+                                          while ($archivo =readdir($dir)) {
+                                            echo "<a href=Material_de_Apoyo/$archivo>$archivo</a><br>";
+                                          }
+                                        }
+                                      ?>
                                 </div>
-                                <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+                                <div class="panel-footer">
+                                    <form method="POST" action="Tutoria" enctype="multipart/form-data">
+
+                                      <input type="file" name="archivo"><br>
+                                      <input type="submit" value="subir archivo" name="boton">
+                                    </form>
+                                </div>
                             </div>
                           </div>
                           <div class="col-sm-4"> 
@@ -240,6 +230,25 @@ class tutoriaController extends Controller
                   }
 
             ?>
+            <?php
+                  $formatos   = array('.jpg', '.png', '.pdf','.doc','.docs','.xlsx');
+                  $directorio = 'Material_de_Apoyo'; 
+                  if (isset($_POST['boton'])){
+                      $nombreArchivo    = $_FILES['archivo']['name'];
+                       $nombreTmpArchivo = $_FILES['archivo']['tmp_name'];
+                       $ext              = substr($nombreArchivo, strrpos($nombreArchivo, '.'));
+                       if (in_array($ext, $formatos)){
+                            if (move_uploaded_file($nombreTmpArchivo, "$directorio/$nombreArchivo")){
+                                  echo "Archivo Subido";
+                            }else{
+                                echo 'ERROR intente nuevamente';
+                            }      
+                       }else{
+                        echo 'ERROR archivo no permitido comuniquese con el administrador';
+    }
+  }
+  
+?>
 
 
 
