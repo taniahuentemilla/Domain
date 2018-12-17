@@ -36,23 +36,24 @@ class HomeController extends Controller
 		//asigno valores a las variables del formulario
 		$email = $request->email;
 		$pass = $request->password; 
-		//es el estado 
+		
+		//el estado de la sesion 
 		$estado = false;
 		
-		//obtenemos el archivo alojado en storage 
+		//obtenemos el archivo 	JSON alojado en storage 
 		$contents = Storage::disk('local')->get('public/usuario.json');
 		$usuariosjson = json_decode($contents); //decodifica el archivo json para leerlo
 		
 		//recorremos la data decodificada
 		foreach($usuariosjson as $key=> $usuario){ 	
 			//validamos que el email y la password sean igual al del json
-			if($email == $usuario->email && $pass == $usuario->password)
+			if($email == $usuario->email && $pass == $usuario->password) //"email" y "password" son el nombre de lo que ingresa el usuario
 			{
 				//cambiamos el estado a true y creamos la variable de sesion email
 				$estado = true;
-				session(['email' => $email]);
+				session(['email' => $email,'permiso' => $usuario->permiso]);
+				
 			}
-		
 		}
 		//validamos el estado
 		if($estado)
