@@ -81,7 +81,7 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      <img src="css/imagenes/bienvenido.png" alt="Bienvenido">
+      <img src="css/imagenes/Domain2.png" alt="Bienvenido">
     </div>
 
     <div class="item">
@@ -89,7 +89,7 @@
     </div>
 
     <div class="item">
-      <img src="css/imagenes/bienvenido.png" alt="Bienvenido">
+      <img src="css/imagenes/Domain2.png" alt="Bienvenido">
     </div>
 
     <div class="item">

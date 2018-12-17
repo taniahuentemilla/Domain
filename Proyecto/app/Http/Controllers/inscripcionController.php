@@ -9,13 +9,49 @@ class inscripcionController extends Controller
     {
      ?>
      	<link href="css/Restaurante/css/bootstrap.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/bootstrap/css/sidebar.css">
         <script src="js/jquery-3.3.1.min.js"></script>
       <script src="js/Comment.js"></script>
       <script src="js/index.js"></script>
      <body style="background-image:url(css/imagenes/uno.jpg);background-attachment:fixed;background-repeat:no-repeat;
      background-size:100%;"> 
+
+     <div class="sidenav">
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#clients">Clients</a>
+  <a href="#contact">Contact</a>
+  <button class="dropdown-btn">Dropdown 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+  <a href="#contact">Search</a>
+</div>
+
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+</script>
       <div class="container" style="padding-top:50px; "> 
-      <div class="jumbroton myBackground" style="background:rgba(255,255,255,.7);width:80%;height:80%;position:absolute;top;10%;left:10%;">
+      <div class="jumbroton myBackground" style="background:rgba(255,255,255,.7);width:80%;height:80%;position:absolute; top:10%; left:15%;">
       <div style="position:absolute;top:15%;left:20%;text-align:center" class="form-group">
              <h1>Bienvenido a la Inscripcion de tutorias <h1/>
              <h1>Ingenieria Civil Informatica <h1/>

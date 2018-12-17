@@ -59,7 +59,7 @@ class tutoriaController extends Controller
                 <h3>Microcontroladores</h3><br>
                 <div id="conversaciones">
                 </div>
-                <form action="leer.php" method="post"></form>
+                <form action="Escribir.php" method="post"></form>
                 <input type="text" class="form-control" placeholder="Usuario"name="usuario" required="">
                 <textarea id="mensaje" placeholder="Mensaje" class="form-control" name="mensaje" required=""></textarea>
                 <button id="boton" class="btn btn-success" onclick="escribir()">Enviar</button>
