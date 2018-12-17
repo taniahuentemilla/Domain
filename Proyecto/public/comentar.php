@@ -10,5 +10,6 @@
 	fwrite($file, $write. PHP_EOL); //escribe en el archivo // el contenido de la variable mensaje // y agrega salto de linea al texto
 	fclose($file); //cierra el archivo abierto en la variable $file
 	fclose($dist); //cierra el archivo abierto en la variable $file
+	header('Location: Tutoria');
 
 ?>

@@ -57,10 +57,11 @@ class tutoriaController extends Controller
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <div id="contenedor"name="contenedor">
                 <h3>Microcontroladores</h3><br>
-                <div id="conversaciones"></div>
+                <div id="conversaciones">
+                </div>
                 <form action="leer.php" method="post"></form>
-                <input type="text" class="form-control" placeholder="Usuario"name="usuario">
-                <textarea id="mensaje" placeholder="Mensaje" class="form-control" name="mensaje"></textarea>
+                <input type="text" class="form-control" placeholder="Usuario"name="usuario" required="">
+                <textarea id="mensaje" placeholder="Mensaje" class="form-control" name="mensaje" required=""></textarea>
                 <button id="boton" class="btn btn-success" onclick="escribir()">Enviar</button>
             </div>
         </div>
@@ -83,7 +84,7 @@ class tutoriaController extends Controller
               </div>
               <div class="collapse navbar-collapse navbar-ex1-collapse">
                   <ul class="nav navbar-nav">
-                    <li ><a href="home">INICIO</a></li>
+                    <li ><a href="http://127.0.0.1:8000">INICIO</a></li>
                     <li ><a href="inscribir">TUTORIAS</a></li>
                     <img style="padding-left: 100px;"src="css/imagenes/logo_horizontal.png" alt="logo" height="50px" width="350px">
                   </ul>
@@ -155,30 +156,29 @@ class tutoriaController extends Controller
                                         $directorio = 'Material_de_Apoyo';
                                         if ($dir = opendir($directorio)){
                                           while ($archivo =readdir($dir)) {
-                                            echo "<a href=Material_de_Apoyo/$archivo>$archivo</a><br>";
+                                            echo "<a href=/Material_de_Apoyo/$archivo>$archivo</a><br>";
                                           }
                                         }
                                       ?>
                                 </div>
                                 <div class="panel-footer">
-                                    <form method="POST" action="Tutoria" enctype="multipart/form-data">
-
+                                    <form method="POST" action="Archivos.php" enctype="multipart/form-data">
                                       <input type="file" name="archivo"><br>
-                                      <input type="submit" value="subir archivo" name="boton">
+                                      <button id="boton" class="btn btn-success">Enviar</button>
                                     </form>
                                 </div>
                             </div>
                           </div>
                           <div class="col-sm-4"> 
                               <div class="panel panel-danger">
-                                  <div class="panel-heading">BLACK FRIDAY DEAL</div>
+                                  <div class="panel-heading">Preguntas y Respuestas</div>
                                   <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
                                   <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
                               </div>
                           </div>
                           <div class="col-sm-4"> 
                               <div class="panel panel-success">
-                                  <div class="panel-heading">BLACK FRIDAY DEAL</div>
+                                  <div class="panel-heading">Accede al Foro</div>
                                   <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
                                   <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
                               </div>
@@ -186,16 +186,14 @@ class tutoriaController extends Controller
                        </div>
                     </div><br><br><br>
 
-              
-          <h3 class="whitney">Dejanos tus comentarios</h3>
-        <form>
+        <h3 class="whitney">Dejanos tus comentarios</h3>
         <label for="exampleInputEmail1">Usuario</label>
-        <input type="text" class="form-control" placeholder="Usuario"name="usuario" style="width: 200px" required>
+        <form action="comentar.php" method="post"> 
+        <input type="text" class="form-control" placeholder="Usuario"name="nombre" style="width: 200px;" required>
         <label for="exampleInputEmail1">Comentario</label>
-        <textarea id="mensaje" placeholder="Mensaje" class="form-control" name="mensaje" style="width: 400px; height: 100px;"required></textarea>
-        <button id="boton" class="btn btn-success" onclick="escribir()">Enviar</button>
+        <textarea id="mensaje" placeholder="Comentario" class="form-control" name="comentario" style="width: 500px;" required=""></textarea>
+        <button  type="submit"id="boton" class="btn btn-success">Enviar</button>
         </form>
-          
 
         <h2>COMENTARIOS</h2>
         <div id="contenidoInput" name="contenidoInput">
@@ -216,7 +214,7 @@ class tutoriaController extends Controller
                                   </div>
                                   <div class='col-sm-5'style='width:700px;'> 
                                       <div class='panel panel-default'>
-                                          <div class='panel-heading'style='background-color:#66ACA7'>
+                                          <div class='panel-heading'style='background-color:#DADADA'>
                                               <strong>".$datos["nombre"]."</strong> <span class='text-muted'>commented 5 days ago</span>
                                           </div>
                                           <div class='panel-body'style=background-color:white>"
@@ -230,25 +228,8 @@ class tutoriaController extends Controller
                   }
 
             ?>
-            <?php
-                  $formatos   = array('.jpg', '.png', '.pdf','.doc','.docs','.xlsx');
-                  $directorio = 'Material_de_Apoyo'; 
-                  if (isset($_POST['boton'])){
-                      $nombreArchivo    = $_FILES['archivo']['name'];
-                       $nombreTmpArchivo = $_FILES['archivo']['tmp_name'];
-                       $ext              = substr($nombreArchivo, strrpos($nombreArchivo, '.'));
-                       if (in_array($ext, $formatos)){
-                            if (move_uploaded_file($nombreTmpArchivo, "$directorio/$nombreArchivo")){
-                                  echo "Archivo Subido";
-                            }else{
-                                echo 'ERROR intente nuevamente';
-                            }      
-                       }else{
-                        echo 'ERROR archivo no permitido comuniquese con el administrador';
-    }
-  }
-  
-?>
+
+            
 
 
 

@@ -19,7 +19,7 @@ class ComentariosController extends Controller
         <input type="text" class="form-control" placeholder="Usuario"name="usuario">
         <label for="exampleInputEmail1">Comentario</label>
         <textarea id="mensaje" placeholder="Mensaje" class="form-control" name="mensaje"></textarea>
-        <button id="boton" class="btn btn-success" onclick="escribir()">Enviar</button>
+        <button id="boton" class="btn btn-success" onclick="escribir2()">Enviar</button>
           
 
         <h2>COMENTARIOS</h2>

@@ -1,4 +1,4 @@
-function escribir(){   
+function escribir2(){   
 	var comentario = $('textarea').val();  // la variable mensaje contendra los valores escritos en el textarea
 	var nombre = $('input:text').val(); // la variable usuario contrenda el dato contenido en el input de tipo texto
 	$.ajax({ //envia la informacion de manera asincrona

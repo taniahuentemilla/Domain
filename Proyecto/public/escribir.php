@@ -1,6 +1,4 @@
 <?php
-	$dist = file('Datos.json');
-    $largo=count($dist)-1;
 	$codificado = array('usuario'=>$_POST['usuario'],'mensaje'=>$_POST['mensaje']);
 	$write = json_encode($codificado);
 	//escritos en los campos "mensaje" y "usuario" ademas de agregarle etiquetas html para agregar negrita y salto de linea 

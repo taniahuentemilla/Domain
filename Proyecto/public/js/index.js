@@ -1,5 +1,5 @@
 $(function(){
-	setInterval(leer,3000); //ejecutara la funcion leer cada 0.1 segundo
+	setInterval(leer,1000); //ejecutara la funcion leer cada 0.1 segundo
 });
 
 function leer(){
@@ -11,7 +11,11 @@ function leer(){
 function escribir(){   
 	var mensaje = $('textarea').val();  // la variable mensaje contendra los valores escritos en el textarea
 	var usuario = $('input:text').val(); // la variable usuario contrenda el dato contenido en el input de tipo texto
-	$.ajax({ //envia la informacion de manera asincrona
+	if (mensaje ==="" || usuario ===""){
+		alert("rellene todos los campos del CHAT porfavor")
+	}
+	else{
+		$.ajax({ //envia la informacion de manera asincrona
 		type:"POST",  //tipo de envio POST
 		//url que dice hacia donde se enviaran los datos
 		url:"escribir.php",
@@ -22,16 +26,10 @@ function escribir(){
 			$('#conversaciones').scrollTop($('#conversaciones')[0].scrollHeight); // mantendra el scroll en el ultimo mensaje
 		}
 	});
-	function Incscribir(){   
-		var curso = $('#select1').val();  // la variable mensaje contendra los valores escritos en el textarea
-		var tutor = $('#select2').val(); // la variable usuario contrenda el dato contenido en el input de tipo texto
-		$.ajax({ //envia la informacion de manera asincrona
-			type:"POST",  //tipo de envio POST
-			//url que dice hacia donde se enviaran los datos
-			url:"inscribir.php",
+	}
+	}
 	
-			data:{"curso":curso,"tutor":tutor}, //se especifican los datos que se enviaran
-		});
+
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
 }
@@ -39,4 +37,4 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
-}
+

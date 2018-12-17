@@ -1,13 +1,13 @@
 
             html.body {
-                background:#00CED1 ;
+                /*background:#00CED1 ;*/
                 margin-top: 0px;
                 padding: 0;
                 display: flex;
                 min-height: 100vh;
             }
             .container{
-                background-color: #00CED1;
+                /*background-color:#00CED1;*/
                 width: 100%;
                 height: 600px;
             }
@@ -37,7 +37,7 @@
                 align-self: flex-end;
                 width:100%;
                 height:100px;
-                background-color:#00CED1;
+                /*background-color:#00CED1;*/
                 line-height: 3;
                 text-align: center;
                 width: 100%;
