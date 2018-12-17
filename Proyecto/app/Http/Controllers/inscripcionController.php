@@ -8,54 +8,31 @@ class inscripcionController extends Controller
     public function inscripcion()
     {
      ?>
-     	<link href="css/Restaurante/css/bootstrap.css" rel="stylesheet">
-      <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
-      <link rel="stylesheet" href="css/bootstrap/css/sidebar.css">
-        <script src="js/jquery-3.3.1.min.js"></script>
+      <link href="css/Restaurante/css/bootstrap.css" rel="stylesheet">
+      <script src="js/jquery-3.3.1.min.js"></script>
       <script src="js/Comment.js"></script>
       <script src="js/index.js"></script>
      <body style="background-image:url(css/imagenes/uno.jpg);background-attachment:fixed;background-repeat:no-repeat;
      background-size:100%;"> 
-
-     <div class="sidenav">
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#clients">Clients</a>
-  <a href="#contact">Contact</a>
-  <button class="dropdown-btn">Dropdown 
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-container">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
-  <a href="#contact">Search</a>
-</div>
-
-<script>
-/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-var dropdown = document.getElementsByClassName("dropdown-btn");
-var i;
-
-for (i = 0; i < dropdown.length; i++) {
-  dropdown[i].addEventListener("click", function() {
-  this.classList.toggle("active");
-  var dropdownContent = this.nextElementSibling;
-  if (dropdownContent.style.display === "block") {
-  dropdownContent.style.display = "none";
-  } else {
-  dropdownContent.style.display = "block";
-  }
-  });
-}
-</script>
       <div class="container" style="padding-top:50px; "> 
-      <div class="jumbroton myBackground" style="background:rgba(255,255,255,.7);width:80%;height:80%;position:absolute; top:10%; left:15%;">
-      <div style="position:absolute;top:15%;left:20%;text-align:center" class="form-group">
-             <h1>Bienvenido a la Inscripcion de tutorias <h1/>
-             <h1>Ingenieria Civil Informatica <h1/>
+      <div class="jumbroton myBackground" style="background:rgba(255,255,255,.7);width:70%;height:80%;position:absolute;top;0%;left:18%;">
+      
+      <a href="http://127.0.0.1:8000/inscripcion" style="position:absolute;left:-21% ; color:blue";>Calendario </a><br><br>
+      <a href="http://127.0.0.1:8000/inscripcion" style="position:absolute;left:-21% ; color:#FF0000" >Información Académica  </a><br><br>
+      <a href="http://127.0.0.1:8000/inscripcion" style="position:absolute;left:-21% ; color:#FF0000" >Ver mi Pefil </a> <br><br>
+      <a href="http://127.0.0.1:8000/inscripcion" style="position:absolute;left:-21% ; color:#FF0000">Soporte y Administración </a> <br><br>
+      <a href="http://127.0.0.1:8000/inscripcion" style="position:absolute;left:-21% ; color:#FF0000" >Ayuda</a> <br><br>
+      <iframe width="250" height="150" src="https://www.youtube.com/embed/VlfwdA2jGdE" style="position:absolute;left:85% " ></iframe>
+      
+   
+      <div style="position:absolute;top:1%;left:15%;text-align:center" class="form-group">
+             <h1>Bienvenido a Aprendizaje Profundo <h1/>
+             <h1>Ingeniería Cívil en Informática <h1/>
             <br>
+            <h5>Registro de ingreso:</h5>
+            <input type="text" name="nombredelacaja" style="position:absolute;left:27%">
+                 
+            <br><br>
             <select class="form-control"style="position:absolute;left:27%;" id="select1">
                 <?php $str_datos = file_get_contents("tutorias.json");
                       $datos = json_decode($str_datos,true);
@@ -74,17 +51,15 @@ for (i = 0; i < dropdown.length; i++) {
                       }
                 ?>
               </select>
-           
+            <br><br>  
             <form action="form-control" style="position:absolute;left:27%;">
             Seleccione su horario:<br />
             <input type="file" name="archivo_foto"><br>
-            </form>
-          
-            <br><button onclick="location.href=''"class=" btn btn-primary" onclick="inscribir()">Inscribir</button>
-           
-
-            
-            
+            </form>        
+            <br><br><br>                            
+            <button action="form-control" style="left:40%; higth:50% ;" onclick="location.href='http://127.0.0.1:8000/insclist'"class="
+             btn btn-primary" onclick="inscribir()">Inscribir</button>                                                                                                             <br> <br>
+             
       </div>
     </div>		
 </div>

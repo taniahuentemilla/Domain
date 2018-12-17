@@ -2,8 +2,8 @@
     "Datos":
         {
         "Carrera" : "Ingenieria Civil en Informatica",
-        "Cursos": ["Topicos de Matematicas", "Programacion I", "Desarrollo Web","Fisica","Robotica"],
-        "Tutores":["Lia Herrera","Catalina Polanco","Lilian Moraga","Juan Espinoza","Eduardo Morales"]
+        "Cursos": ["I.Bases de Datos INFO1122", "Programacion I INFO1120", "Programación de Robot INFO1121","Programación II INFO1123"],
+        "Tutores":["Lia Herrera Gomez","Catalina Polanco Esparza","Lilian Moraga Valenzuela","Juan Espinoza López","Eduardo Morales Rodriguez"]
         }
    
     }
