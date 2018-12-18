@@ -17,10 +17,13 @@ class RegistroController extends Controller
             $usuarioInfo = Storage::disk('local')->exists('public/usuario.json') ? json_decode(Storage::disk('local')->get('public/usuario.json')) : [];
 			
             $inputData = $request->only(['email','password']);
+			
  
             array_push($usuarioInfo,$inputData);
     
             Storage::disk('local')->put('public/usuario.json', json_encode($usuarioInfo));
+			//$usuarioInfo =
+			//json_encode($usuarioInfo)
  
 			Session::flash('exito', 'Usuario registrado! ;).' );
 

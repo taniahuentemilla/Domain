@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="card bg-transparent-1 text-white">
-        <div class="card-header bg-transparent-1">{{ __('Login') }}</div>
+        <div class="card-header bg-transparent-1">{{ __('Acceder') }}</div>
 
         <div class="card-body ">
             <form method="POST" action="{{ route('preguntar') }}">

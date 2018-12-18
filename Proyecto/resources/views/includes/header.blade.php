@@ -22,7 +22,7 @@
                         </li>
                         @break
 
-                    @default <!-- perfil de usuario por defecto -->
+                    @default<!-- perfil de usuario por defecto -->
                         <li class="nav-item">
                             <a href="#" class="nav-link">Perfil</a>
                         </li>
@@ -35,7 +35,7 @@
                     <a class="nav-link" href="#">Inscripción</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('login') }}" class="nav-link">Login</a>
+                    <a href="{{ route('login') }}" class="nav-link">Acceder</a>
                 </li>
                 @if (Route::has('register'))
                     <li class="nav-item">
