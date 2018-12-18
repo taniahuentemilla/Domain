@@ -12,8 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('inicio');
+})->name('inicio');
 
 Route::get('Cursos', 'CursosController@Cursos');
 Route::get('Comentarios', 'ComentariosController@Comentarios');
