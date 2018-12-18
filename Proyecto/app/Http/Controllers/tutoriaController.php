@@ -156,7 +156,7 @@ class tutoriaController extends Controller
                                         $directorio = 'Material_de_Apoyo';
                                         if ($dir = opendir($directorio)){
                                           while ($archivo =readdir($dir)) {
-                                            echo "<form method=POST action=eliminar.php><href=/Material_de_Apoyo/$archivo>$archivo</a><a></a><input type=hidden name=borrar value=$archivo><input type=submit value=Eliminar></form>";
+                                            echo "<form method=POST action=eliminar.php><a href=/Material_de_Apoyo/$archivo target=_blank>$archivo</a><a></a><input type=hidden name=borrar value=$archivo><input type=submit value=Eliminar></form>";
                                           }
                                     
 
