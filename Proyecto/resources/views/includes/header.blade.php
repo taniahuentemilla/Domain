@@ -32,7 +32,7 @@
                     <a class="nav-link" href="Tutoria">Tutorias</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="inscricion">Inscripción</a>
+                    <a class="nav-link" href="inscripcion">Inscripción</a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('login') }}" class="nav-link">Acceder</a>

@@ -18,13 +18,11 @@ class inscripcionController extends Controller
       <div class="jumbroton myBackground" style="background:rgba(255,255,255,.7);width:70%;height:80%;position:absolute;top;0%;left:18%;">
       
       <a href="http://127.0.0.1:8000/inscripcion" style="position:absolute;left:-21% ; color:blue";>Calendario </a><br><br>
-      <a href="http://127.0.0.1:8000/inscripcion" style="position:absolute;left:-21% ; color:#FF0000" >Información Académica  </a><br><br>
-      <a href="http://127.0.0.1:8000/inscripcion" style="position:absolute;left:-21% ; color:#FF0000" >Ver mi Pefil </a> <br><br>
-      <a href="http://127.0.0.1:8000/inscripcion" style="position:absolute;left:-21% ; color:#FF0000">Soporte y Administración </a> <br><br>
-      <a href="http://127.0.0.1:8000/inscripcion" style="position:absolute;left:-21% ; color:#FF0000" >Ayuda</a> <br><br>
-      <iframe width="250" height="150" src="https://www.youtube.com/embed/VlfwdA2jGdE" style="position:absolute;left:85% " ></iframe>
+      <a href="http://127.0.0.1:8000/inscripcion" style="position:absolute;left:-21% ; color:blue" >Información Académica  </a><br><br>
+      <a href="http://127.0.0.1:8000/inscripcion" style="position:absolute;left:-21% ; color:blue" >Ver mi Pefil </a> <br><br>
+      <a href="http://127.0.0.1:8000/inscripcion" style="position:absolute;left:-21% ; color:blue">Soporte y Administración </a> <br><br>
+      <a href="http://127.0.0.1:8000/inscripcion" style="position:absolute;left:-21% ; color:blue" >Ayuda</a> <br><br>
       
-   
       <div style="position:absolute;top:1%;left:15%;text-align:center" class="form-group">
              <h1>Bienvenido a Aprendizaje Profundo <h1/>
              <h1>Ingeniería Cívil en Informática <h1/>
@@ -34,39 +32,38 @@ class inscripcionController extends Controller
                  
             <br><br>
             <form method="POST" action="Inscribir.php">
-            <select class="form-control"style="position:absolute;left:27%;" name="select1">
-                <?php $str_datos = file_get_contents("tutorias.json");
-                      $datos = json_decode($str_datos,true);
-                      for($i=0;$i<count($datos["Datos"]["Cursos"]);$i++){
-                      echo "<option value=".$datos["Datos"]["Cursos"][$i].'">'.$datos["Datos"]["Cursos"][$i]."</option>";
+            <select class="form-control"style="position:absolute;left:27%;" name="select1"> 
+                <?php $str_datos = file_get_contents("tutorias.json");   //selecciona json de que contiene las tutorias
+                      $datos = json_decode($str_datos,true); // si el json tiene datos 
+                      for($i=0;$i<count($datos["Datos"]["Cursos"]);$i++){ //recorre esos datos e indica del arreglo datos los cursos
+                      echo "<option value=".$datos["Datos"]["Cursos"][$i].'">'.$datos["Datos"]["Cursos"][$i]."</option>";//imprime de datos
+                      // los cursos disponibles
                       }
                 ?>
             </select>
             <br>
             <br>
             <select class="form-control"style="position:absolute;left:27%;"name="select2">
-                 <?php $str_datos = file_get_contents("tutorias.json");
-                      $datos = json_decode($str_datos,true);
-                      for($i=0;$i<count($datos["Datos"]["Tutores"]);$i++){
-                      echo "<option value=".$datos["Datos"]["Tutores"][$i].'">'.$datos["Datos"]["Tutores"][$i]."</option>";
+                 <?php $str_datos = file_get_contents("tutorias.json");//selecciona json que contiene las tutorias
+                      $datos = json_decode($str_datos,true);// si este cotiene archivos
+                      for($i=0;$i<count($datos["Datos"]["Tutores"]);$i++){// recorre de el arreglo Datos todos los tutores disponibles 
+                      echo "<option value=".$datos["Datos"]["Tutores"][$i].'">'.$datos["Datos"]["Tutores"][$i]."</option>";//muestra todos los
+                      // tutores desde el arreglo datos
                       }
                 ?>
-              </select><br>
-              <br>
-              <br><button type="submit" style="left:40%; height:50% ;"class="
-             btn btn-primary">Inscribir</button><br>
-             </form>
-              <div style="padding-left: 150px;">
-             <form action="">
-            <h5>seleccione su horario</h5><input type="file" name="archivo_foto">
+              </select>
+              <br><br>
+              <div action="form-control" style="position:absolute;left:27%;">
+            Seleccione su horario:<br />
+            <input type="file" name="archivo_foto"><br>
+            </div> 
+              <br><br><br><button type="subtmit" style="position:left;" onclick="location.href='"class="
+             btn btn-primary">Inscribir</button> 
+              </form>
             <br>
-            </form>
-            </div>
-            
-            <br><br>  
-                    
+                   
             <br><br><br>                            
-                                                                                                                         <br> <br>
+                                                                                                                        <br> <br>
              
       </div>
     </div>		
