@@ -65,7 +65,7 @@ class tutoriaController extends Controller
                 <button id="boton" class="btn btn-success" onclick="escribir()">Enviar</button>
             </div>
         </div>
-        <span style="font-size:30px;cursor:pointer; position: fixed;color: #39FF22"onclick="openNav()">&#9776; CHAT</span>
+        <button class="btn-success" onclick="openNav()" style="position: fixed;">CHAT</button>
 
 
 
@@ -85,7 +85,7 @@ class tutoriaController extends Controller
               <div class="collapse navbar-collapse navbar-ex1-collapse">
                   <ul class="nav navbar-nav">
                     <li ><a href="http://127.0.0.1:8000">INICIO</a></li>
-                    <li ><a href="inscribir">TUTORIAS</a></li>
+                    <li ><a href="inscripcion">Inscribete</a></li>
                     <img style="padding-left: 100px;"src="css/imagenes/logo_horizontal.png" alt="logo" height="50px" width="350px">
                   </ul>
 
@@ -156,14 +156,19 @@ class tutoriaController extends Controller
                                         $directorio = 'Material_de_Apoyo';
                                         if ($dir = opendir($directorio)){
                                           while ($archivo =readdir($dir)) {
-                                            echo "<a href=/Material_de_Apoyo/$archivo>$archivo</a><br>";
+                                            echo "<form method=POST action=eliminar.php><href=/Material_de_Apoyo/$archivo>$archivo</a><a></a><input type=hidden name=borrar value=$archivo><input type=submit value=Eliminar></form>";
                                           }
+                                    
+
                                         }
+
+
                                       ?>
+            
                                 </div>
                                 <div class="panel-footer">
                                     <form method="POST" action="Archivos.php" enctype="multipart/form-data">
-                                      <input type="file" name="archivo"><br>
+                                      <input type="file" name="archivo" required=""><br>
                                       <button id="boton" class="btn btn-success">Enviar</button>
                                     </form>
                                 </div>
@@ -173,14 +178,14 @@ class tutoriaController extends Controller
                               <div class="panel panel-danger">
                                   <div class="panel-heading">Preguntas y Respuestas</div>
                                   <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-                                  <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+                                  <div class="panel-footer">Que tando aprendiste? haz el test</div>
                               </div>
                           </div>
                           <div class="col-sm-4"> 
                               <div class="panel panel-success">
                                   <div class="panel-heading">Accede al Foro</div>
-                                  <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-                                  <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+                                  <div class="panel-body"> <a href="home"><img src="css/imagenes/LogoDomain.png" class="img-responsive" style="width:100%; height: 27%;" alt="Image"></a> </div>
+                                  <div class="panel-footer">Comparte Temas en nuestro Foro</div>
                               </div>
                           </div>
                        </div>

@@ -1,5 +1,5 @@
 $(function(){
-	setInterval(leer,1000); //ejecutara la funcion leer cada 0.1 segundo
+	setInterval(leer,1000); //ejecutara la funcion leer cada 1 segundo
 });
 
 function leer(){
@@ -28,13 +28,12 @@ function escribir(){
 	});
 	}
 	}
-	
-
-function openNav() {
+function openNav() { 
   document.getElementById("mySidenav").style.width = "250px";
+  //obtiene los elementos de mySidenav en este caso width de "Style" (Ventana de chat)
 }
 
 function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("mySidenav").style.width = "0"; 
 }
 

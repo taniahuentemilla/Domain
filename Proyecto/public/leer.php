@@ -5,6 +5,7 @@ for ($i = max(0, count($dist)-50); $i < count($dist); $i++) { // en counter alma
   	                                                          // si eso es verdadero	
   $linea=$dist[$i];
   $datos = json_decode($linea,true);
-  echo"<b>".$datos['usuario']."</b>"."dice: ".$datos['mensaje']."<br>";
+  echo"<b>".$datos['usuario']."</b>"."dice: ".$datos['mensaje']."<br>"; 
+  //imprime la estructura html con los datos contenidos y especidicados en la variable $datos
 }
 ?>

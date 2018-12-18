@@ -33,7 +33,8 @@ class inscripcionController extends Controller
             <input type="text" name="nombredelacaja" style="position:absolute;left:27%">
                  
             <br><br>
-            <select class="form-control"style="position:absolute;left:27%;" id="select1">
+            <form method="POST" action="Inscribir.php">
+            <select class="form-control"style="position:absolute;left:27%;" name="select1">
                 <?php $str_datos = file_get_contents("tutorias.json");
                       $datos = json_decode($str_datos,true);
                       for($i=0;$i<count($datos["Datos"]["Cursos"]);$i++){
@@ -43,22 +44,29 @@ class inscripcionController extends Controller
             </select>
             <br>
             <br>
-            <select class="form-control"style="position:absolute;left:27%;"id="select2">
+            <select class="form-control"style="position:absolute;left:27%;"name="select2">
                  <?php $str_datos = file_get_contents("tutorias.json");
                       $datos = json_decode($str_datos,true);
                       for($i=0;$i<count($datos["Datos"]["Tutores"]);$i++){
                       echo "<option value=".$datos["Datos"]["Tutores"][$i].'">'.$datos["Datos"]["Tutores"][$i]."</option>";
                       }
                 ?>
-              </select>
+              </select><br>
+              <br>
+              <br><button type="submit" style="left:40%; height:50% ;"class="
+             btn btn-primary">Inscribir</button><br>
+             </form>
+              <div style="padding-left: 150px;">
+             <form action="">
+            <h5>seleccione su horario</h5><input type="file" name="archivo_foto">
+            <br>
+            </form>
+            </div>
+            
             <br><br>  
-            <form action="form-control" style="position:absolute;left:27%;">
-            Seleccione su horario:<br />
-            <input type="file" name="archivo_foto"><br>
-            </form>        
+                    
             <br><br><br>                            
-            <button action="form-control" style="left:40%; higth:50% ;" onclick="location.href='http://127.0.0.1:8000/insclist'"class="
-             btn btn-primary" onclick="inscribir()">Inscribir</button>                                                                                                             <br> <br>
+                                                                                                                         <br> <br>
              
       </div>
     </div>		
